@@ -1,0 +1,28 @@
+Package: ggflowchart
+Type: Package
+Title: Flow-chart consort ggplot
+Version: 0.1.0
+Date: 2022-08-01
+Author: Jordi Real
+Maintainer: The package maintainer <jordireal@gmail.com>
+Description: ggflowchart contains functions to create flow-chart from ggconsort functions.
+    It is not require to know ggconsort functions because ggflowchart create automatically.
+License: GLP-3
+Encoding: UTF-8
+LazyData: true
+Imports: 
+      dplyr,
+      purrr,
+      ggplot2,
+      tidyr,
+      rlang,
+      readxl,
+      Hmisc,
+      stringr,
+      foreign,
+      tibble,
+      data.table,
+      ggconsort,
+      glue,
+      ggtext
+RoxygenNote: 7.1.1
