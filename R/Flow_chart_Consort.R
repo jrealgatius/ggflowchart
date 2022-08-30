@@ -35,7 +35,19 @@ Flow_chart_Consort<-function(dt=ggconsort::trial_data,
                              lab_start="Assessed for eligibility",
                              lab_random="Analyzed sample",
                              lab_exclusions=NULL)
-{
+  {
+
+
+
+
+  # dt = ggconsort::trial_data
+  # exclusions = c("declined", "prior_chemo", "bone_mets")
+  # sequencial = TRUE
+  # grups = NA
+  # lab_start = "Assessed for eligibility"
+  # lab_random = "Analyzed sample"
+  # lab_exclusions = NULL
+
 
   ## Testing
   # dt=dt_nova
@@ -142,6 +154,7 @@ Flow_chart_Consort<-function(dt=ggconsort::trial_data,
       list(Excluded_total=dt_excluded_totals),
       dtlist_exclusions)
 
+
   arglist = append(list(cohort_start(dt,lab_start)),
                    llistat_arguments)
 
@@ -149,6 +162,7 @@ Flow_chart_Consort<-function(dt=ggconsort::trial_data,
   dades_cohorts<-
     do.call(cohort_define,
             arglist)
+
 
   # Provide text labels for cohorts ---------------------------
   llistat_noms<-dades_cohorts$data %>% names()
@@ -264,8 +278,9 @@ Flow_chart_Consort<-function(dt=ggconsort::trial_data,
           ggconsort::geom_consort() + xlim(-10,20) +
           ggconsort::theme_consort(margin_h = 10, margin_v = 1)
       }
-}
 
+
+}
 
 
 # #############       Exemples        ################
@@ -283,7 +298,6 @@ Flow_chart_Consort<-function(dt=ggconsort::trial_data,
 # library(dplyr)
 # library(purrr)
 # library(ggplot2)
-#
 # Flow_chart_Consort(dt=trial_data,exclusions=c("declined","prior_chemo","bone_mets"),sequencial = F,grups = "treatment",
 #                    lab_start = "Pob inicial", lab_random = "Aleatoritzats")
 #
