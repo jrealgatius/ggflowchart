@@ -4,7 +4,7 @@
 \alias{read_conductor}
 \title{Read conductor file different formats txt o rds o xls xlsx o data_frame tibble}
 \usage{
-read_conductor(fitxer)
+read_conductor(fitxer, ...)
 }
 \arguments{
 \item{fitxer}{Character as a file name and path or data.frame}

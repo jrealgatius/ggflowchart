@@ -155,13 +155,12 @@ Flow_chart_Consort<-function(dt=ggconsort::trial_data,
       dtlist_exclusions)
 
 
-  arglist = append(list(cohort_start(dt,lab_start)),
+  arglist = append(list(ggconsort::cohort_start(dt,lab_start)),
                    llistat_arguments)
 
   # Generar les cohorts via funció
   dades_cohorts<-
-    do.call(cohort_define,
-            arglist)
+    do.call(ggconsort::cohort_define,arglist)
 
 
   # Provide text labels for cohorts ---------------------------
@@ -201,7 +200,7 @@ Flow_chart_Consort<-function(dt=ggconsort::trial_data,
     purrr::map_chr(~paste0('• {cohort_count_adorn(study_cohorts, ', .x,')}<br>')) %>%
     glue::glue_collapse()
   caixa_exclusions<-paste0(
-    "{cohort_count_adorn(study_cohorts, Excluded_total)}<br>",
+    "{ggconsort::cohort_count_adorn(study_cohorts, Excluded_total)}<br>",
     caixa_exc)
 
 

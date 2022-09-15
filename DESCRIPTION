@@ -7,9 +7,11 @@ Author: Jordi Real
 Maintainer: The package maintainer <jordireal@gmail.com>
 Description: ggflowchart contains functions to create flow-chart from ggconsort functions.
     It is not require to know ggconsort functions because ggflowchart create automatically.
-License: GLP-3
+License: GPL(>=3)
 Encoding: UTF-8
 LazyData: true
+Depends:
+      R (>= 3.5.1)
 Imports: 
       dplyr,
       purrr,
@@ -25,4 +27,4 @@ Imports:
       ggconsort,
       glue,
       ggtext
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
